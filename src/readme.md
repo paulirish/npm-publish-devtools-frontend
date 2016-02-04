@@ -7,9 +7,22 @@ It's not (yet) a proper module, but rather a pure mirror of [what's in the Chrom
 The version number of this npm package (e.g. `1.0.373466`) refers to the Chromium commit position of latest frontend git commit. It's incremented with every Chromium commit, however this package is updated ~daily.
 
 ### More
-* DevTools documentation: [devtools.chrome.com](https://devtools.chrome.com)
+* [@ChromeDevTools] on Twitter
 * Chrome DevTools mailing list: [groups.google.com/forum/google-chrome-developer-tools](https://groups.google.com/forum/#!forum/google-chrome-developer-tools)
-* Contributing to DevTools: [bit.ly/devtools-contribution-guide](http://bit.ly/devtools-contribution-guide)
+* DevTools documentation: [devtools.chrome.com](https://devtools.chrome.com)
 * [Debugger protocol docs](https://developer.chrome.com/devtools/docs/debugger-protocol) and [Chrome Debugging Protocol Viewer](http://chromedevtools.github.io/debugger-protocol-viewer/)
   * [chrome-remote-interface](https://github.com/cyrus-and/chrome-remote-interface), recommended lib for interfacing with the debugging protocol
   * [crmux](https://github.com/sidorares/crmux) multiplexes protocol connections
+
+### Development
+* Contributing to DevTools: [bit.ly/devtools-contribution-guide](http://bit.ly/devtools-contribution-guide)
+* Code reviews mailing list: [devtools-reviews@chromium.org]
+* All devtools commits: [RSS feed] or [@DevToolsCommits] on Twitter
+* [All open DevTools tickets] on crbug.com
+* File a new DevTools ticket: [crbug.com/new](https://code.google.com/p/chromium/issues/entry?labels=OS-All,Cr-Platform-DevTools,Type-Bug,Pri-2&status=Assigned&summary=DevTools:%20&comment=)
+
+  [devtools-reviews@chromium.org]: https://groups.google.com/a/chromium.org/forum/#!forum/devtools-reviews
+  [RSS feed]: https://feeds.peter.sh/chrome-devtools/
+  [@ChromeDevTools]: http://twitter.com/ChromeDevTools
+  [@DevToolsCommits]: http://twitter.com/DevToolsCommits
+  [all open DevTools tickets]: http://goo.gl/N6OH9

@@ -3,7 +3,10 @@
 publish_script_path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 frontend_path="$HOME/code/devtools-standalone"
 
-cp $publish_script_path/package.json $frontend_path
+cp $publish_script_path/src/package.json $frontend_path
+cp $publish_script_path/src/readme.md $frontend_path
+
+
 cd $frontend_path
 
 # get the chromium incremental commit position (e.g. 373466)
@@ -21,3 +24,4 @@ then npm publish
 fi
 
 rm ./package.json
+rm ./readme.md

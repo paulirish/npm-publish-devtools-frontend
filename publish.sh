@@ -3,9 +3,9 @@
 publish_script_path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 frontend_path="$HOME/code/devtools-standalone"
 
+
 cp $publish_script_path/src/package.json $frontend_path
 cp $publish_script_path/src/readme.md $frontend_path
-
 
 cd $frontend_path
 
@@ -23,5 +23,7 @@ if npm version --no-git-tag-version "1.0.$commit_position"
 then npm publish
 fi
 
+# clean up non-repo stuff
 rm ./package.json
 rm ./readme.md
+# rm ./npm-debug.log

@@ -16,13 +16,14 @@ The version number of this npm package (e.g. `1.0.373466`) refers to the Chromiu
 
 ### Development
 * Contributing to DevTools: [bit.ly/devtools-contribution-guide](http://bit.ly/devtools-contribution-guide)
-* Code reviews mailing list: [devtools-reviews@chromium.org]
-* All devtools commits: [RSS feed] or [@DevToolsCommits] on Twitter
+* All devtools commits: [View the log], [RSS feed] or [@DevToolsCommits] on Twitter
 * [All open DevTools tickets] on crbug.com
 * File a new DevTools ticket: [crbug.com/new](https://code.google.com/p/chromium/issues/entry?labels=OS-All,Cr-Platform-DevTools,Type-Bug,Pri-2&status=Assigned&summary=DevTools:%20&comment=)
+* Code reviews mailing list: [devtools-reviews@chromium.org]
 
   [devtools-reviews@chromium.org]: https://groups.google.com/a/chromium.org/forum/#!forum/devtools-reviews
   [RSS feed]: https://feeds.peter.sh/chrome-devtools/
+  [View the log]: https://chromium.googlesource.com/chromium/src/third_party/WebKit/Source/devtools/+log/master
   [@ChromeDevTools]: http://twitter.com/ChromeDevTools
   [@DevToolsCommits]: http://twitter.com/DevToolsCommits
   [all open DevTools tickets]: http://goo.gl/N6OH9

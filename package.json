@@ -1,0 +1,26 @@
+{
+  "name": "chrome-devtools-frontend",
+  "version": "1.0.373466",
+  "description": "Chrome DevTools' UI",
+  "main": "front_end/inspector.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChromeDevTools/devtools-frontend.git"
+  },
+  "keywords": [
+    "devtools",
+    "chrome",
+    "chromium",
+    "blink",
+    "debugger"
+  ],
+  "author": "Paul Irish",
+  "license": "SEE LICENSE IN https://chromium.googlesource.com/chromium/src/+/master/LICENSE",
+  "bugs": {
+    "url": "https://code.google.com/p/chromium/issues/list?can=2&q=Cr%3DPlatform-DevTools&colspec=ID+Pri+Stars+Status+Owner+Summary+Modified&x=m&y=releaseblock&cells=tiles"
+  },
+  "homepage": "https://devtools.chrome.com"
+}

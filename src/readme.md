@@ -27,4 +27,4 @@ The version number of this npm package (e.g. `1.0.373466`) refers to the Chromiu
   [View the log]: https://chromium.googlesource.com/chromium/src/third_party/WebKit/Source/devtools/+log/master
   [@ChromeDevTools]: http://twitter.com/ChromeDevTools
   [@DevToolsCommits]: http://twitter.com/DevToolsCommits
-  [all open DevTools tickets]: http://goo.gl/N6OH9
+  [all open DevTools tickets]: https://goo.gl/UT9OeO

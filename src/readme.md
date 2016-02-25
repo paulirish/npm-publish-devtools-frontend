@@ -2,7 +2,7 @@
 
 This package contains the client-side of the developer tools built into Blink, which is part of Chromium (which is, in turn, distributed as Chrome).
 
-It's not (yet) a proper module, but rather a pure mirror of [what's in the Chromium repo](https://chromium.googlesource.com/chromium/src/+/master/third_party/WebKit/Source/devtools/front_end/). You're quite welcome to consume it, but unfortunately we're not yet ready to embrace CJS or ES6 modules, so it may require [some effort](https://github.com/paulirish/automated-chrome-profiling/blob/master/lib/timeline-model.js). :)
+It's not (yet) a proper module, but rather a pure mirror of [what's in the Chromium repo](https://chromium.googlesource.com/chromium/src/+/master/third_party/WebKit/Source/devtools/front_end/). You're quite welcome to consume it, but unfortunately we're not yet ready to embrace CJS or ES6 modules, so it may require [some effort](https://github.com/paulirish/devtools-timeline-model/blob/master/index.js). :)
 
 The version number of this npm package (e.g. `1.0.373466`) refers to the Chromium commit position of latest frontend git commit. It's incremented with every Chromium commit, however this package is updated ~daily.
 

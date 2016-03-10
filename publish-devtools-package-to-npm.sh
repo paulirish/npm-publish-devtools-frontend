@@ -22,9 +22,19 @@ if ! [[ $commit_position =~ $re ]] ; then
    echo "error: Not a number" >&2; exit 1
 fi
 
+# switch to real npm
+if hash npmrc 2>/dev/null; then
+    npmrc default
+fi
+
 # bump and publish
 if npm version --no-git-tag-version "1.0.$commit_position"
 then npm publish
+fi
+
+# switch back
+if hash npmrc 2>/dev/null; then
+    npmrc local
 fi
 
 # clean up non-repo stuff

@@ -5,7 +5,6 @@ frontend_path="$HOME/code/devtools-standalone"
 
 
 cp $publish_script_path/src/package.json $frontend_path
-cp $publish_script_path/src/readme.md $frontend_path
 cp $publish_script_path/src/.npmignore $frontend_path
 
 cd $frontend_path
@@ -29,10 +28,9 @@ then npm publish
 fi
 
 # clean up non-repo stuff
-mv devtools.dontupload devtools.gyp 
+mv devtools.dontupload devtools.gyp
 
 # keeping these around won't conflict actually.
 # rm ./package.json
-# rm ./readme.md
 # rm ./.npmignore
 # # rm ./npm-debug.log

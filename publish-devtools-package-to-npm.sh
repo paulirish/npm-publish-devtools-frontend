@@ -6,6 +6,7 @@ frontend_path="$HOME/code/devtools-standalone"
 
 cp $publish_script_path/src/package.json $frontend_path
 cp $publish_script_path/src/.npmignore $frontend_path
+cp $publish_script_path/src/LICENSE $frontend_path
 
 cd $frontend_path
 

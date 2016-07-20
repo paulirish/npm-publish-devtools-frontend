@@ -1,7 +1,7 @@
 {
   "name": "chrome-devtools-frontend",
-  "version": "1.0.373466",
-  "description": "Chrome DevTools' UI",
+  "version": "1.0.XXXXXX",
+  "description": "Chrome DevTools UI",
   "main": "front_end/inspector.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,10 +17,10 @@
     "blink",
     "debugger"
   ],
-  "author": "Paul Irish",
+  "author": "The Chromium Authors",
   "license": "SEE LICENSE IN https://chromium.googlesource.com/chromium/src/+/master/LICENSE",
   "bugs": {
-    "url": "https://code.google.com/p/chromium/issues/list?can=2&q=Cr%3DPlatform-DevTools&colspec=ID+Pri+Stars+Status+Owner+Summary+Modified&x=m&y=releaseblock&cells=tiles"
+    "url": "https://bugs.chromium.org/p/chromium/issues/list?can=2&q=component:Platform%3EDevTools%20&sort=-opened&colspec=ID%20Stars%20Owner%20Summary%20Modified%20Opened"
   },
   "homepage": "https://devtools.chrome.com"
 }

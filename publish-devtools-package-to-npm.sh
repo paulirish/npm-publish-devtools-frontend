@@ -3,15 +3,11 @@
 publish_script_path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 frontend_path="$HOME/code/devtools-standalone"
 
-
-cp $publish_script_path/src/package.json $frontend_path
-cp $publish_script_path/src/.npmignore $frontend_path
-cp $publish_script_path/src/LICENSE $frontend_path
-
 cd $frontend_path
 
 # the gyp files cause big problems
 mv devtools.gyp devtools.dontupload
+cp package.json package.json.bak.dontupload
 
 
 # get the chromium incremental commit position (e.g. 373466)
@@ -40,6 +36,7 @@ fi
 
 # clean up non-repo stuff
 mv devtools.dontupload devtools.gyp
+mv package.json.bak.dontupload package.json
 
 # keeping these around won't conflict actually.
 # rm ./package.json

@@ -6,7 +6,6 @@ frontend_path="$HOME/code/devtools-standalone"
 cd $frontend_path
 
 # the gyp files cause big problems
-mv devtools.gyp devtools.dontupload
 cp package.json package.json.bak.dontupload
 
 
@@ -25,10 +24,8 @@ then npm publish
 fi
 
 # clean up non-repo stuff
-mv devtools.dontupload devtools.gyp
 mv package.json.bak.dontupload package.json
 
 # keeping these around won't conflict actually.
-# rm ./package.json
 # rm ./.npmignore
 # # rm ./npm-debug.log

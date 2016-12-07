@@ -1,7 +1,7 @@
 #!/bin/bash
 
 publish_script_path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-frontend_path="$HOME/code/devtools-standalone"
+frontend_path="$HOME/code/devtools-frontend-pristine"
 
 cd $frontend_path
 

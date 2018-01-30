@@ -45,3 +45,6 @@ fi
 
 # revert the version bump in package.json
 git reset --hard
+# delete backend/css files to be extra safe
+git clean -f
+

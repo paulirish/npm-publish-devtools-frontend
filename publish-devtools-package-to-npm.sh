@@ -30,8 +30,8 @@ git checkout "$commit_hash"
 ninja -C "$chromium_src_path/out/Default/" supported_css_properties frontend_protocol_sources
 
 res_path="$chromium_src_path/out/Default/resources/inspector"
-cp "$res_path/InspectorBackendCommands.js" "$frontend_path"
-cp "$res_path/SupportedCSSProperties.js" "$frontend_path"
+cp "$res_path/InspectorBackendCommands.js" "$frontend_path/front_end"
+cp "$res_path/SupportedCSSProperties.js" "$frontend_path/front_end"
 cd $frontend_path || exit 1
 
 # The InspectorBackendCommands & SupportedCSSProperties files are not added to the git repo, as the github only has original sources.

@@ -27,6 +27,7 @@ fi
 cd "$chromium_src_path" || exit 1
 git fetch origin master
 git checkout "$commit_hash"
+GYP_DEFINES=disable_nacl=1 gclient sync --jobs=70 --nohooks
 ninja -C "$chromium_src_path/out/Default/" supported_css_properties frontend_protocol_sources
 
 res_path="$chromium_src_path/out/Default/resources/inspector"
@@ -39,8 +40,8 @@ cd $frontend_path || exit 1
 
 
 # bump and publish
-if npm version --no-git-tag-version "1.0.$commit_position"
-then npm publish
+if npm version --no-git-tag-version "1.0.$commit_position"; then
+  npm publish
 fi
 
 # revert the version bump in package.json

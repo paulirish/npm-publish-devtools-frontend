@@ -25,9 +25,9 @@ fi
 
 # get the SupportedCSSProperties.js & InspectorBackendCommands.js files for this specific commit
 cd "$chromium_src_path" || exit 1
-git fetch origin master
+git fetch origin master  || exit 1
 git checkout "$commit_hash"
-GYP_DEFINES=disable_nacl=1 gclient sync --delete_unversioned_trees --reset --jobs=70 --nohooks
+GYP_DEFINES=disable_nacl=1 gclient sync --delete_unversioned_trees --reset --jobs=70 || exit 1
 ninja -C "$chromium_src_path/out/Default/" supported_css_properties frontend_protocol_sources aria_properties || exit 1
 
 res_path="$chromium_src_path/out/Default/resources/inspector"

@@ -13,7 +13,7 @@ standalone_frontend_path="$HOME/code/pristine/devtools-frontend-pristine"
 chromium_src_path="$HOME/chromium-tot/src"
 
 cd "$chromium_src_path"
-git checkout -f origin/master # we assume the repo is recently updated
+git checkout -f master
 
 # find the most recent roll
 chromium_recent_roll_hash=$(git log --grep="third_party/devtools-frontend" -n1 --pretty="format:%H")
@@ -67,5 +67,5 @@ git reset --hard
 git clean -fdx
 
 # reset state
-git checkout origin/master
+git checkout master
 

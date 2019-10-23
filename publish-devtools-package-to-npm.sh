@@ -8,10 +8,6 @@
 
 set -ex -o pipefail
 
-# REMOVE THIS ONCE https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/1874672 lands
-# also we should move this to daily instead of hourly
-exit 0
-
 publish_script_path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 standalone_frontend_path="$HOME/code/pristine/devtools-frontend-pristine"
 chromium_src_path="$HOME/chromium-tot/src"

@@ -13,7 +13,7 @@ standalone_frontend_path="$HOME/code/pristine/devtools-frontend-pristine"
 chromium_src_path="$HOME/chromium-tot/src"
 
 cd "$chromium_src_path"
-git checkout -f master
+git checkout -f origin/master
 
 # find the most recent roll
 chromium_recent_roll_hash=$(git log --grep="third_party/devtools-frontend" -n1 --pretty="format:%H")
@@ -66,6 +66,4 @@ git reset --hard
 # delete backend/css files to be clean. (the -x is neccessary since these files are .gitignored these days)
 git clean -fdx
 
-# reset state
-git checkout master
 

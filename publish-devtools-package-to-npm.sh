@@ -66,6 +66,4 @@ git reset --hard
 # delete backend/css files to be clean. (the -x is neccessary since these files are .gitignored these days)
 git clean -fdx
 
-# reset state
-git checkout master
 

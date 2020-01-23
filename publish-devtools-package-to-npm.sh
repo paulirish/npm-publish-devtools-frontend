@@ -13,7 +13,7 @@ standalone_frontend_path="$HOME/code/pristine/devtools-frontend-pristine"
 chromium_src_path="$HOME/chromium-tot/src"
 
 cd "$chromium_src_path"
-git checkout -f master
+git checkout -f origin/master
 
 # find the most recent roll
 chromium_recent_roll_hash=$(git log --grep="third_party/devtools-frontend" -n1 --pretty="format:%H")
@@ -23,7 +23,7 @@ chromium_recent_roll_hash=$(git log --grep="third_party/devtools-frontend" -n1 -
 standalone_commit_hash=$(git log $chromium_recent_roll_hash -n1 --pretty="format:%s" | ggrep --o -P '[a-f0-9]{7,}..\K([a-f0-9]{7,})')
 
 # get the chromium rev (e.g. 373466) from the commit message body
-chromium_commit_position=$(git log $chromium_recent_roll_hash -n1 --pretty="format:%b"  | grep "Cr-Commit-Position" | grep -E -o '#(\d+)' | grep -E -o '\d+')
+chromium_commit_position=$(git log $chromium_recent_roll_hash -n1 --pretty="format:%b"  | grep "Cr-Commit-Position" | head -n1 | grep -E -o '#(\d+)' | grep -E -o '\d+')
 
 chromium_commit_hash=$chromium_recent_roll_hash
 

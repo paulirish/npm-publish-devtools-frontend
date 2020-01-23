@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#exit 0;
+# THIS IS DEPRECATED 
+# repo is now synced with copybara
+
+
 set -x
 
 frontend_path="$HOME/code/pristine/devtools-frontend-pristine"

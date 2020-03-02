@@ -13,6 +13,7 @@ standalone_frontend_path="$HOME/code/pristine/devtools-frontend-pristine"
 chromium_src_path="$HOME/chromium-tot/src"
 
 cd "$chromium_src_path"
+git fetch origin
 git checkout -f origin/master
 
 # find the most recent roll

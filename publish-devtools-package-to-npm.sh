@@ -2,8 +2,6 @@
 
 #####
 # find the commits that roll standalone devtools into chromium.
-# get the generated files from the roll commit
-# copy them back into standalone at the most recent commit of the roll range
 ######
 
 set -ex -o pipefail
@@ -35,16 +33,7 @@ if ! [[ $chromium_commit_position =~ $re ]] ; then
    echo "error: Not a number" >&2; exit 1
 fi
 
-# get the SupportedCSSProperties.js & InspectorBackendCommands.js files for this specific commit
-git checkout "$chromium_commit_hash"
-GYP_DEFINES=disable_nacl=1 gclient sync --delete_unversioned_trees --reset --jobs=70
-ninja -C "$chromium_src_path/out/Default/" supported_css_properties frontend_protocol_sources aria_properties
-
-chromium_res_path="$chromium_src_path/out/Default/resources/inspector"
-cp "$chromium_res_path/InspectorBackendCommands.js" 		"$standalone_frontend_path/front_end/"
-cp "$chromium_res_path/SupportedCSSProperties.js" 			"$standalone_frontend_path/front_end/"
-cp "$chromium_res_path/accessibility/ARIAProperties.js" 	"$standalone_frontend_path/front_end/accessibility/"
-
+# UPDATE: the SupportedCSSProperties.js & InspectorBackendCommands.js files are now in front_end generated. (we used to have to build them, but now, no extra work required!)
 
 ################################
 # back to standalone repo      #
@@ -54,8 +43,6 @@ cd $standalone_frontend_path
 git fetch origin master
 git checkout "$standalone_commit_hash"
 
-
-# The InspectorBackendCommands & SupportedCSSProperties files are only included in the published npm package, but wiped out afterwards.
 
 # bump and publish
 if npm version --no-git-tag-version "1.0.$chromium_commit_position"; then

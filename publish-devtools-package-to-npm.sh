@@ -15,7 +15,7 @@ git fetch origin
 git checkout -f origin/master
 
 # find the most recent roll
-chromium_recent_roll_hash=$(git log --grep="third_party/devtools-frontend" -n1 --pretty="format:%H")
+chromium_recent_roll_hash=$(git log --grep=devtools -n1 --pretty="format:%H" -- DEPS)
 
 # look at the roll range (of the standalone repo) and get the most recent commit of the two. 
 # use a lookbehind \K to only output what's after it. https://unix.stackexchange.com/a/13472

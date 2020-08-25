@@ -41,6 +41,8 @@ fi
 ################################
 
 cd $standalone_frontend_path
+git reset --hard
+git clean -fdx
 git fetch origin master
 git checkout "$standalone_commit_hash"
 

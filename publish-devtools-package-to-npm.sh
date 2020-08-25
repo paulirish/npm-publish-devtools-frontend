@@ -55,5 +55,8 @@ if npm version --no-git-tag-version "1.0.$chromium_commit_position"; then
 fi
 
 
+# and repeat so our pristine folder has no changes.
+git reset --hard
+git clean -fdx
 
 

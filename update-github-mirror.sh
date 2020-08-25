@@ -13,5 +13,5 @@ frontend_path="$HOME/code/pristine/devtools-frontend-pristine"
 # origin					https://chromium.googlesource.com/devtools/devtools-frontend
 # github					git@github.com:ChromeDevTools/devtools-frontend.git
 
-cd $frontend_path && git checkout master && git pull origin master && git push github master
+cd $frontend_path && git reset --hard && git checkout master && git pull origin master && git push github master
 

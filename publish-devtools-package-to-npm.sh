@@ -41,7 +41,9 @@ fi
 ################################
 
 cd $standalone_frontend_path
+# revert the version bump in package.json
 git reset --hard
+# delete backend/css files to be clean. (the -x is neccessary since these files are .gitignored these days)
 git clean -fdx
 git fetch origin master
 git checkout "$standalone_commit_hash"
@@ -52,9 +54,6 @@ if npm version --no-git-tag-version "1.0.$chromium_commit_position"; then
   npm publish
 fi
 
-# revert the version bump in package.json
-git reset --hard
-# delete backend/css files to be clean. (the -x is neccessary since these files are .gitignored these days)
-git clean -fdx
+
 
 

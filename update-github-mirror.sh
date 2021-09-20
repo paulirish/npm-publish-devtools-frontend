@@ -13,5 +13,6 @@ frontend_path="$HOME/code/pristine/devtools-frontend-pristine"
 # origin					https://chromium.googlesource.com/devtools/devtools-frontend
 # github					git@github.com:ChromeDevTools/devtools-frontend.git
 
-cd $frontend_path && git reset --hard && git checkout master && git pull origin master && git push github master
+# TODO: the GH repo still uses master
+cd $frontend_path && git reset --hard && git checkout main && git pull origin main && git push github master
 

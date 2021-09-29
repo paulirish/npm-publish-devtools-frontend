@@ -1,9 +1,6 @@
 #!/bin/bash
 
-#exit 0;
-# THIS IS DEPRECATED 
-# repo is now synced with copybara
-
+# there was an attempt to sync this with copybara but it failed, so this script is still used.
 
 set -x
 
@@ -13,6 +10,7 @@ frontend_path="$HOME/code/pristine/devtools-frontend-pristine"
 # origin					https://chromium.googlesource.com/devtools/devtools-frontend
 # github					git@github.com:ChromeDevTools/devtools-frontend.git
 
-# TODO: the GH repo still uses master
-cd $frontend_path && git reset --hard && git checkout main && git pull origin main && git push github master
+# as of sept 2021, we push to github on both master and main
+cd $frontend_path && git reset --hard && git fetch origin && git fetch github && \
+  git checkout origin/main && git push github main:master && git push github main
 

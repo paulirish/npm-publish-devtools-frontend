@@ -12,5 +12,5 @@ frontend_path="$HOME/code/pristine/devtools-frontend-pristine"
 
 # as of sept 2021, we push to github on both master and main
 cd $frontend_path && git reset --hard && git fetch origin && git fetch github && \
-  git checkout origin/main && git push github main:master && git push github main
+  git checkout main && git pull origin main && git push github main && git push github main:master
 

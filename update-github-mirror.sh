@@ -1,6 +1,10 @@
 #!/bin/bash
 
 # there was an attempt to sync this with copybara but it failed, so this script is still used.
+# UPDATE: simon zünd got it workin!  2022 jun 14.  
+
+exit 0;
+
 
 set -x
 

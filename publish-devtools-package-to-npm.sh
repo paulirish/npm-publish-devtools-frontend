@@ -13,7 +13,7 @@ git clean -fdx
 
 
 # this is the chrome-for-testing version string, eg 131.0.6752.0
-chrome_version=$(cat DEPS | grep "'chrome'" | head -n1 | egrep -o "\d+\.\d+\.\d+\.\d+")
+chrome_version="$(cat DEPS | grep "'chrome'" | head -n1 | sed "s/[^0-9.]//g")"
 
 
 # Find most recent roll of chromium INTO devtools-frontend standalone.

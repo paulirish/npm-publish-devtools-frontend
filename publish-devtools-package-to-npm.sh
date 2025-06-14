@@ -26,6 +26,16 @@ if ! [[ $chromium_commit_position =~ $re ]] ; then
    echo "error: Not a number" >&2; exit 1
 fi
 
+echo "updating npmignore"
+echo "" >> .npmignore
+echo "front_end/panels/timeline/fixtures/traces" >> .npmignore
+echo "front_end/core/i18n/locales/*.json" >> .npmignore
+echo "front_end/third_party" >> .npmignore
+echo "" >> .npmignore
+
+
+# to see whats being published..
+#    npm pack --dry-run &| ~/code/webtreemap-cdt/npm-pack-output-to-treemap.sh
 
 ## TODO: at this point it'd be easier to publish with the chrome version but.. 
 # i dont see how to get the FULL chrome version string into an npm compatible version string, without problems or unexpected hyphens:
